@@ -1,2 +1,2 @@
-title: SNAILS - Schema Naming Assessments for Improved LLM-based SQL inference
-description: SNAILS is a set of NL-to-SQL-related artifacts designed to explore the effects of schema naming on LLM-based NL-to-SQL performance. 
+title: SNAILS
+description: Schema Naming Assessments for Improved LLM-based SQL inference
