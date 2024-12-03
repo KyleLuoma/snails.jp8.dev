@@ -1,7 +1,0 @@
-remote_theme: pages-themes/modernist@v0.2.0
-title: SNAILS
-description: Schema Naming Assessments for Improved LLM-based SQL inference
-github.repository_url: www.github.com/kyleluoma/SNAILS
-
-plugins:
-- jekyll-remote-theme
