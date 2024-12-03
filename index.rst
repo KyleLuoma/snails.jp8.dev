@@ -17,3 +17,5 @@ SNAILS is a set of NL-to-SQL-related artifacts designed to explore the effects o
 
    usage/installation
    artifacts/artifacts
+   natural_views/natural_views
+   reproducibility/reproducibility
