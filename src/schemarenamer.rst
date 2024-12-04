@@ -3,6 +3,8 @@
 schemarenamer
 =============
 
+.. py:module:: schemarenamer
+
 .. py:function:: main()
     
    Executes the main logic of the script. This includes classifying the database schema, performing schema renaming, and saving the results to an Excel file.

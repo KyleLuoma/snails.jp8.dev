@@ -40,6 +40,7 @@
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
@@ -52,6 +53,7 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  | <a href="#X"><strong>X</strong></a>
  
 </div>
@@ -74,6 +76,8 @@
 </li>
       <li><a href="src/schema_graph.html#SchemaGraph._construct_vertice_lookup_dicts">_construct_vertice_lookup_dicts() (SchemaGraph method)</a>
 </li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator._mp_batch_function">_mp_batch_function() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
       <li><a href="src/schema_graph.html#SchemaGraph._repair_constraints">_repair_constraints() (SchemaGraph method)</a>
 </li>
   </ul></td>
@@ -90,6 +94,10 @@
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.assign_label_from_score">assign_label_from_score() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="B">B</h2>
@@ -102,6 +110,18 @@
 
       <ul>
         <li><a href="src/query_profiler.html#all_tests">all_tests()</a>
+</li>
+        <li><a href="src/util/call_llama.html#call_code_llama">call_code_llama()</a>
+</li>
+        <li><a href="src/util/call_google_nl.html#call_codey">call_codey()</a>
+</li>
+        <li><a href="src/util/call_google_nl.html#call_google_palm">call_google_palm()</a>
+</li>
+        <li><a href="src/util/callgpt.html#call_gpt">call_gpt()</a>
+</li>
+        <li><a href="src/util/calltogetherai.html#call_togetherai">call_togetherai()</a>
+</li>
+        <li><a href="src/util/call_google_nl.html#call_vertex">call_vertex()</a>
 </li>
         <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#classify_batch_with_canine">classify_batch_with_canine()</a>
 </li>
@@ -121,19 +141,23 @@
 </li>
         <li><a href="src/semantic_compare.html#do_batch_compare">do_batch_compare()</a>
 </li>
-        <li><a href="src/schemarenamer.html#do_fewshot_identifier_transform">do_fewshot_identifier_transform()</a>
-</li>
-        <li><a href="src/schemarenamer.html#do_schema_renaming">do_schema_renaming()</a>
-</li>
         <li><a href="src/nl_to_sql_inference_and_prompt_generation.html#do_single_question">do_single_question()</a>
 </li>
         <li><a href="src/nl_to_sql_inference_and_prompt_generation.html#do_single_question_test">do_single_question_test()</a>
 </li>
         <li><a href="src/query_manual_evaluation.html#evaluate_queries_in_workbook">evaluate_queries_in_workbook()</a>
 </li>
+        <li><a href="src/util/load_consolidated_results.html#export_gold_data">export_gold_data()</a>
+</li>
+        <li><a href="src/util/callgpt.html#get_decoded_token_list">get_decoded_token_list()</a>
+</li>
+        <li><a href="src/util/load_nl_questions.html#load_nlq_into_df">load_nlq_into_df()</a>
+</li>
         <li><a href="src/nl_to_sql_inference_and_prompt_generation.html#log_attempt">log_attempt()</a>
 </li>
-        <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#main">main()</a>, <a href="src/schemarenamer.html#main">[1]</a>
+        <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#main">main()</a>
+</li>
+        <li><a href="src/util/tokenprocessing.html#make_token_tag">make_token_tag()</a>
 </li>
         <li><a href="src/schema_linking_eval.html#mp_compare_query_schema_elements">mp_compare_query_schema_elements()</a>
 </li>
@@ -155,8 +179,6 @@
 </li>
         <li><a href="src/query_profiler.html#tag_query_test">tag_query_test()</a>
 </li>
-        <li><a href="src/schemarenamer.html#transform_score_df">transform_score_df()</a>
-</li>
         <li><a href="src/schema_linking_eval.html#update_scores_in_existing_results">update_scores_in_existing_results()</a>
 </li>
       </ul></li>
@@ -166,6 +188,50 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.calculate_score_and_distance_of_delim_and_composite">calculate_score_and_distance_of_delim_and_composite() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+      <li>
+    call_code_llama()
+
+      <ul>
+        <li><a href="src/util/call_llama.html#call_code_llama">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    call_codey()
+
+      <ul>
+        <li><a href="src/util/call_google_nl.html#call_codey">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    call_google_palm()
+
+      <ul>
+        <li><a href="src/util/call_google_nl.html#call_google_palm">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    call_gpt()
+
+      <ul>
+        <li><a href="src/util/callgpt.html#call_gpt">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    call_togetherai()
+
+      <ul>
+        <li><a href="src/util/calltogetherai.html#call_togetherai">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    call_vertex()
+
+      <ul>
+        <li><a href="src/util/call_google_nl.html#call_vertex">built-in function</a>
+</li>
+      </ul></li>
       <li><a href="artifacts/naturalness_classifiers/canine_naturalness_classifier.html#CanineIdentifierClassifier">CanineIdentifierClassifier (built-in class)</a>
 </li>
       <li>
@@ -182,6 +248,8 @@
         <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#classify_db_schema">built-in function</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="artifacts/naturalness_classifiers/canine_naturalness_classifier.html#CanineIdentifierClassifier.classify_identifier">classify_identifier() (CanineIdentifierClassifier method)</a>
 </li>
       <li>
@@ -191,8 +259,8 @@
         <li><a href="src/query_manual_evaluation.html#clean">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/util/call_llama.html#codellama.json">codellama.json (built-in variable)</a>
+</li>
       <li>
     compare_gold_to_generated()
 
@@ -200,6 +268,8 @@
         <li><a href="src/semantic_compare.html#compare_gold_to_generated">built-in function</a>
 </li>
       </ul></li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.compare_letter_order">compare_letter_order() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
       <li>
     compare_queries()
 
@@ -214,7 +284,19 @@
         <li><a href="src/schema_linking_eval.html#compare_query_schema_elements">built-in function</a>
 </li>
       </ul></li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.config_dict">config_dict (ConsolidatedResultsLoader attribute)</a>
+</li>
+      <li><a href="src/util/db_util.html#db_util.connect_to_db">connect_to_db() (in module db_util)</a>
+
+      <ul>
+        <li><a href="src/util/db_util_sqlite.html#db_util_sqlite.connect_to_db">(in module db_util_sqlite)</a>
+</li>
+      </ul></li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader">ConsolidatedResultsLoader (built-in class)</a>
+</li>
       <li><a href="src/natural_view_builder.html#NaturalViewBuilder.create_views_in_database">create_views_in_database() (NaturalViewBuilder method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.create_word_letter_freq_vectors">create_word_letter_freq_vectors() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#CsvDataDictInterpreter">CsvDataDictInterpreter (built-in class)</a>
 </li>
@@ -227,6 +309,26 @@
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter">DataDictInterpreter (built-in class)</a>
 </li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreterFactory">DataDictInterpreterFactory (built-in class)</a>
+</li>
+      <li>
+    db_util
+
+      <ul>
+        <li><a href="src/util/db_util.html#module-db_util">module</a>
+</li>
+      </ul></li>
+      <li>
+    db_util_sqlite
+
+      <ul>
+        <li><a href="src/util/db_util_sqlite.html#module-db_util_sqlite">module</a>
+</li>
+      </ul></li>
+      <li><a href="src/word_list_matching.html#word_list_matching.debug_print">debug_print() (in module word_list_matching)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.default_value">default_value() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.default_value_list">default_value_list() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li>
     denaturalize_query()
@@ -242,7 +344,11 @@
         <li><a href="src/nl_to_sql_inference_and_prompt_generation.html#denaturalize_query_test">built-in function</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="src/query_manual_evaluation.html#DfVariable">DfVariable (built-in class)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.distance_batch_function">distance_batch_function() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li>
     do_batch_compare()
@@ -251,24 +357,18 @@
         <li><a href="src/semantic_compare.html#do_batch_compare">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="artifacts/naturalness_classifiers/canine_naturalness_classifier.html#CanineIdentifierClassifier.do_batch_job">do_batch_job() (CanineIdentifierClassifier method)</a>
 </li>
-      <li>
-    do_fewshot_identifier_transform()
+      <li><a href="src/schemarenamer.html#schemarenamer.do_fewshot_identifier_transform">do_fewshot_identifier_transform() (in module schemarenamer)</a>
+</li>
+      <li><a href="src/util/db_util.html#db_util.do_query">do_query() (in module db_util)</a>
 
       <ul>
-        <li><a href="src/schemarenamer.html#do_fewshot_identifier_transform">built-in function</a>
+        <li><a href="src/util/db_util_sqlite.html#db_util_sqlite.do_query">(in module db_util_sqlite)</a>
 </li>
       </ul></li>
-      <li>
-    do_schema_renaming()
-
-      <ul>
-        <li><a href="src/schemarenamer.html#do_schema_renaming">built-in function</a>
+      <li><a href="src/schemarenamer.html#schemarenamer.do_schema_renaming">do_schema_renaming() (in module schemarenamer)</a>
 </li>
-      </ul></li>
       <li>
     do_single_question()
 
@@ -289,6 +389,8 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.evaluate_naturalness">evaluate_naturalness() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
       <li>
     evaluate_queries_in_workbook()
 
@@ -297,6 +399,23 @@
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    export_gold_data()
+
+      <ul>
+        <li><a href="src/util/load_consolidated_results.html#export_gold_data">built-in function</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.find_most_natural_in_composite">find_most_natural_in_composite() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="G">G</h2>
@@ -304,23 +423,66 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="src/query_manual_evaluation.html#DfVariable.get">get() (DfVariable method)</a>
 </li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.get_best_match">get_best_match() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
       <li><a href="src/schema_graph.html#SchemaGraph.get_connecting_vertices_and_edges">get_connecting_vertices_and_edges() (SchemaGraph method)</a>
 </li>
-      <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.get_context_around_identifier">get_context_around_identifier() (DataDictInterpreter method)</a>
+      <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#CsvDataDictInterpreter.get_context_around_identifier">get_context_around_identifier() (CsvDataDictInterpreter method)</a>
+
+      <ul>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.get_context_around_identifier">(DataDictInterpreter method)</a>
 </li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#JsonDataDictInterpreter.get_context_around_identifier">(JsonDataDictInterpreter method)</a>
+</li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#PdfDataDictInterpreter.get_context_around_identifier">(PdfDataDictInterpreter method)</a>
+</li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#XmlDataDictInterpreter.get_context_around_identifier">(XmlDataDictInterpreter method)</a>
+</li>
+      </ul></li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreterFactory.get_current_interpreter">get_current_interpreter() (DataDictInterpreterFactory method)</a>
 </li>
+      <li><a href="src/util/db_util.html#db_util.get_db_tables_cardinality">get_db_tables_cardinality() (in module db_util)</a>
+</li>
+      <li>
+    get_decoded_token_list()
+
+      <ul>
+        <li><a href="src/util/callgpt.html#get_decoded_token_list">built-in function</a>
+</li>
+      </ul></li>
       <li><a href="src/query_profiler.html#QueryProfiler.get_identifiers_and_labels">get_identifiers_and_labels() (QueryProfiler method)</a>
+</li>
+      <li><a href="src/query_profiler.html#QueryProfiler.get_identifiers_and_labels_df">get_identifiers_and_labels_df() (QueryProfiler method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="src/query_profiler.html#QueryProfiler.get_identifiers_and_labels_df">get_identifiers_and_labels_df() (QueryProfiler method)</a>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.get_joined_dataframes">get_joined_dataframes() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.get_levenshstein_dist_dict">get_levenshstein_dist_dict() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.get_min_distance_for_single_word">get_min_distance_for_single_word() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreterFactory.get_new_interpreter">get_new_interpreter() (DataDictInterpreterFactory method)</a>
 </li>
       <li><a href="src/schema_graph.html#SchemaGraph.get_schema_identifiers_between_tables">get_schema_identifiers_between_tables() (SchemaGraph method)</a>
 </li>
+      <li><a href="src/util/db_util.html#db_util.get_table_cardinality">get_table_cardinality() (in module db_util)</a>
+</li>
       <li><a href="src/schema_graph.html#SchemaGraph.get_table_connections">get_table_connections() (SchemaGraph method)</a>
+</li>
+      <li><a href="src/util/db_util.html#db_util.get_tables_and_columns_df">get_tables_and_columns_df() (in module db_util)</a>
+
+      <ul>
+        <li><a href="src/util/db_util_sqlite.html#db_util_sqlite.get_tables_and_columns_df">(in module db_util_sqlite)</a>
+</li>
+      </ul></li>
+      <li><a href="src/util/db_util.html#db_util.get_tables_and_columns_from_sql_server_db">get_tables_and_columns_from_sql_server_db() (in module db_util)</a>
+</li>
+      <li><a href="src/util/db_util_sqlite.html#db_util_sqlite.get_tables_and_columns_from_sqlite_db">get_tables_and_columns_from_sqlite_db() (in module db_util_sqlite)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.get_words_with_letters_in_order">get_words_with_letters_in_order() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.get_words_with_same_letters">get_words_with_same_letters() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.getNaturalIdentifier">getNaturalIdentifier() (DataDictInterpreter method)</a>
 </li>
@@ -330,13 +492,25 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.index_dictionary_file">index_dictionary_file() (DataDictInterpreter method)</a>
+      <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#CsvDataDictInterpreter.index_dictionary_file">index_dictionary_file() (CsvDataDictInterpreter method)</a>
+
+      <ul>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.index_dictionary_file">(DataDictInterpreter method)</a>
 </li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#JsonDataDictInterpreter.index_dictionary_file">(JsonDataDictInterpreter method)</a>
+</li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#PdfDataDictInterpreter.index_dictionary_file">(PdfDataDictInterpreter method)</a>
+</li>
+        <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#XmlDataDictInterpreter.index_dictionary_file">(XmlDataDictInterpreter method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="src/natural_view_builder.html#NaturalViewBuilder.initialize_db_nl_schema">initialize_db_nl_schema() (NaturalViewBuilder method)</a>
 </li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.interactive_prompt_builder">interactive_prompt_builder() (DataDictInterpreter method)</a>
+</li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.iterate_possible_words">iterate_possible_words() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -352,6 +526,31 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_annotation_files">load_annotation_files() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_identifier_crosswalks">load_identifier_crosswalks() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_identifier_token_analysis_files">load_identifier_token_analysis_files() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li>
+    load_nlq_into_df()
+
+      <ul>
+        <li><a href="src/util/load_nl_questions.html#load_nlq_into_df">built-in function</a>
+</li>
+      </ul></li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_prompt_tokens">load_prompt_tokens() (ConsolidatedResultsLoader method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_query_token_character_ratio_file">load_query_token_character_ratio_file() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_question_token_analysis_files">load_question_token_analysis_files() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_sentence_level_similarities">load_sentence_level_similarities() (ConsolidatedResultsLoader method)</a>
+</li>
+      <li><a href="src/util/load_consolidated_results.html#ConsolidatedResultsLoader.load_world_level_similarities">load_world_level_similarities() (ConsolidatedResultsLoader method)</a>
+</li>
       <li>
     log_attempt()
 
@@ -369,12 +568,48 @@
     main()
 
       <ul>
-        <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#main">built-in function</a>, <a href="src/schemarenamer.html#main">[1]</a>
+        <li><a href="artifacts/naturalness_classifiers/schemaclassifier.html#main">built-in function</a>
+</li>
+      </ul></li>
+      <li><a href="src/schemarenamer.html#schemarenamer.main">main() (in module schemarenamer)</a>
+
+      <ul>
+        <li><a href="src/word_list_matching.html#word_list_matching.main">(in module word_list_matching)</a>
+</li>
+      </ul></li>
+      <li><a href="src/util/db_util.html#db_util.make_db_schema_prompt">make_db_schema_prompt() (in module db_util)</a>
+
+      <ul>
+        <li><a href="src/util/db_util_sqlite.html#db_util_sqlite.make_db_schema_prompt">(in module db_util_sqlite)</a>
 </li>
       </ul></li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.make_few_shot_prompt">make_few_shot_prompt() (DataDictInterpreter method)</a>
 </li>
+      <li>
+    make_token_tag()
+
+      <ul>
+        <li><a href="src/util/tokenprocessing.html#make_token_tag">built-in function</a>
+</li>
+      </ul></li>
       <li><a href="artifacts/naturalness_modifier/data_dict_interpreter.html#DataDictInterpreter.make_zero_shot_prompt">make_zero_shot_prompt() (DataDictInterpreter method)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="src/util/db_util.html#module-db_util">db_util</a>
+</li>
+        <li><a href="src/util/db_util_sqlite.html#module-db_util_sqlite">db_util_sqlite</a>
+</li>
+        <li><a href="src/schemarenamer.html#module-schemarenamer">schemarenamer</a>
+</li>
+        <li><a href="src/word_list_matching.html#module-word_list_matching">word_list_matching</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.mp_calculate_score_and_distance_of_delim_and_composite">mp_calculate_score_and_distance_of_delim_and_composite() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
       <li>
     mp_compare_query_schema_elements()
@@ -383,8 +618,8 @@
         <li><a href="src/schema_linking_eval.html#mp_compare_query_schema_elements">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.mp_get_min_distance_for_word_list">mp_get_min_distance_for_word_list() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
       <li>
     mp_query_parse_function()
 
@@ -412,6 +647,8 @@
         <li><a href="src/nl_to_sql_inference_and_prompt_generation.html#naturalize_prompt">built-in function</a>
 </li>
       </ul></li>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator">NaturalnessCalculator (class in word_list_matching)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="src/natural_view_builder.html#NaturalViewBuilder">NaturalViewBuilder (built-in class)</a>
@@ -483,14 +720,23 @@
       <li><a href="src/schema_graph.html#SchemaGraph">SchemaGraph (built-in class)</a>
 </li>
       <li>
+    schemarenamer
+
+      <ul>
+        <li><a href="src/schemarenamer.html#module-schemarenamer">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.score_result">score_result() (word_list_matching.NaturalnessCalculator method)</a>
+</li>
+      <li>
     separate_by_line()
 
       <ul>
         <li><a href="src/query_manual_evaluation.html#separate_by_line">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="src/query_manual_evaluation.html#DfVariable.set">set() (DfVariable method)</a>
 </li>
   </ul></td>
@@ -510,13 +756,10 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    transform_score_df()
-
-      <ul>
-        <li><a href="src/schemarenamer.html#transform_score_df">built-in function</a>
+      <li><a href="src/word_list_matching.html#word_list_matching.NaturalnessCalculator.tokenize_identifier">tokenize_identifier() (word_list_matching.NaturalnessCalculator method)</a>
 </li>
-      </ul></li>
+      <li><a href="src/schemarenamer.html#schemarenamer.transform_score_df">transform_score_df() (in module schemarenamer)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -528,6 +771,19 @@
 
       <ul>
         <li><a href="src/schema_linking_eval.html#update_scores_in_existing_results">built-in function</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    word_list_matching
+
+      <ul>
+        <li><a href="src/word_list_matching.html#module-word_list_matching">module</a>
 </li>
       </ul></li>
   </ul></td>
@@ -574,7 +830,7 @@
 <li class="toctree-l1"><a class="reference internal" href="artifacts/artifacts.html">SNAILS artifacts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="natural_views/natural_views.html">Natural Views</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="src/src.html">Source Code Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src/src.html">src</a></li>
 </ul>
 
 <div class="relations">

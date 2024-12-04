@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Utilities &#8212; SNAILS 2025 documentation</title>
+    <title>util &#8212; SNAILS 2025 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
@@ -14,7 +14,8 @@
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="semantic_compare" href="../semantic_compare.html" />
+    <link rel="next" title="call_google_nl" href="call_google_nl.html" />
+    <link rel="prev" title="word_list_matching" href="../word_list_matching.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,9 +33,75 @@
 
           <div class="body" role="main">
             
-  <section id="utilities">
-<span id="util"></span><h1>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">¶</a></h1>
+  <section id="util">
+<span id="id1"></span><h1>util<a class="headerlink" href="#util" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="call_google_nl.html">call_google_nl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="call_google_nl.html#call_vertex"><code class="docutils literal notranslate"><span class="pre">call_vertex()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_google_nl.html#call_google_palm"><code class="docutils literal notranslate"><span class="pre">call_google_palm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_google_nl.html#call_codey"><code class="docutils literal notranslate"><span class="pre">call_codey()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="call_llama.html">call_llama</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="call_llama.html#call_code_llama"><code class="docutils literal notranslate"><span class="pre">call_code_llama()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_llama.html#codellama.json"><code class="docutils literal notranslate"><span class="pre">codellama.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="callgpt.html">callgpt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="callgpt.html#call_gpt"><code class="docutils literal notranslate"><span class="pre">call_gpt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callgpt.html#get_decoded_token_list"><code class="docutils literal notranslate"><span class="pre">get_decoded_token_list()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calltogetherai.html">calltogetherai</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calltogetherai.html#call_togetherai"><code class="docutils literal notranslate"><span class="pre">call_togetherai()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="db_util.html">db_util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.do_query"><code class="docutils literal notranslate"><span class="pre">do_query()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.connect_to_db"><code class="docutils literal notranslate"><span class="pre">connect_to_db()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.get_tables_and_columns_from_sql_server_db"><code class="docutils literal notranslate"><span class="pre">get_tables_and_columns_from_sql_server_db()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.get_tables_and_columns_df"><code class="docutils literal notranslate"><span class="pre">get_tables_and_columns_df()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.make_db_schema_prompt"><code class="docutils literal notranslate"><span class="pre">make_db_schema_prompt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.get_table_cardinality"><code class="docutils literal notranslate"><span class="pre">get_table_cardinality()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util.html#db_util.get_db_tables_cardinality"><code class="docutils literal notranslate"><span class="pre">get_db_tables_cardinality()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="db_util_sqlite.html">db_util_sqlite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db_util_sqlite.html#db_util_sqlite.do_query"><code class="docutils literal notranslate"><span class="pre">do_query()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util_sqlite.html#db_util_sqlite.connect_to_db"><code class="docutils literal notranslate"><span class="pre">connect_to_db()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util_sqlite.html#db_util_sqlite.get_tables_and_columns_from_sqlite_db"><code class="docutils literal notranslate"><span class="pre">get_tables_and_columns_from_sqlite_db()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util_sqlite.html#db_util_sqlite.make_db_schema_prompt"><code class="docutils literal notranslate"><span class="pre">make_db_schema_prompt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_util_sqlite.html#db_util_sqlite.get_tables_and_columns_df"><code class="docutils literal notranslate"><span class="pre">get_tables_and_columns_df()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="load_consolidated_results.html">load_consolidated_results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.config_dict"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.config_dict</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.get_joined_dataframes"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.get_joined_dataframes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_prompt_tokens"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_prompt_tokens()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_sentence_level_similarities"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_sentence_level_similarities()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_world_level_similarities"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_world_level_similarities()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_identifier_token_analysis_files"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_identifier_token_analysis_files()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_question_token_analysis_files"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_question_token_analysis_files()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_query_token_character_ratio_file"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_query_token_character_ratio_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_annotation_files"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_annotation_files()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_consolidated_results.html#ConsolidatedResultsLoader.load_identifier_crosswalks"><code class="docutils literal notranslate"><span class="pre">ConsolidatedResultsLoader.load_identifier_crosswalks()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="load_consolidated_results.html#export_gold_data"><code class="docutils literal notranslate"><span class="pre">export_gold_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="load_nl_questions.html">load_nl_questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_nl_questions.html#load_nlq_into_df"><code class="docutils literal notranslate"><span class="pre">load_nlq_into_df()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tokenprocessing.html">tokenprocessing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tokenprocessing.html#make_token_tag"><code class="docutils literal notranslate"><span class="pre">make_token_tag()</span></code></a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 
@@ -70,7 +137,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../artifacts/artifacts.html">SNAILS artifacts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../natural_views/natural_views.html">Natural Views</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../src.html">Source Code Documentation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../src.html">src</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../end_to_end_data_prep_and_prediction.html">end_to_end_data_prep_and_prediction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../natural_view_builder.html">natural_view_builder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nl_to_sql_inference_and_prompt_generation.html">nl_to_sql_inference_and_prompt_generation</a></li>
@@ -80,7 +147,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../schema_linking_eval.html">schema_linking_eval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../schemarenamer.html">schemarenamer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../semantic_compare.html">semantic_compare</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../word_list_matching.html">word_list_matching</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">util</a></li>
 </ul>
 </li>
 </ul>
@@ -89,8 +157,9 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../src.html">Source Code Documentation</a><ul>
-      <li>Previous: <a href="../semantic_compare.html" title="previous chapter">semantic_compare</a></li>
+  <li><a href="../src.html">src</a><ul>
+      <li>Previous: <a href="../word_list_matching.html" title="previous chapter">word_list_matching</a></li>
+      <li>Next: <a href="call_google_nl.html" title="next chapter">call_google_nl</a></li>
   </ul></li>
   </ul></li>
 </ul>

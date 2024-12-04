@@ -6,8 +6,10 @@ data_dict_interpreter
 
 .. py:class:: DataDictInterpreter(database_name: str = None, data_dict_file: str = None)
 
+
     This class is used to interpret a data dictionary. This is a superclass. Subclasses exist for different document types.
     
+
     :param database_name: The name of the database.
     :type database_name: str or None
     :param data_dict_file: The path to the data dictionary file.
@@ -112,10 +114,10 @@ data_dict_interpreter
     :vartype beam_width: int
 
     .. py:method:: get_context_around_identifier(identifier: str, beam_width: int = None) -> list
-        :inheritdoc:: DataDictInterpreter.get_context_around_identifier
+        .. :inheritdoc:: DataDictInterpreter.get_context_around_identifier
 
     .. py:method:: index_dictionary_file(file_obj: PdfReader) -> defaultdict
-        :inheritdoc:: DataDictInterpreter.index_dictionary_file
+        .. :inheritdoc:: DataDictInterpreter.index_dictionary_file
 
 
 .. py:class:: XmlDataDictInterpreter(database_name: str = None, data_dict_file: str = None)
@@ -130,10 +132,10 @@ data_dict_interpreter
     :vartype beam_width: int
 
     .. py:method:: get_context_around_identifier(identifier: str, beam_width: int = None) -> list
-        :inheritdoc:: DataDictInterpreter.get_context_around_identifier
+        .. :inheritdoc:: DataDictInterpreter.get_context_around_identifier
 
     .. py:method:: index_dictionary_file(file_obj) -> defaultdict
-        :inheritdoc:: DataDictInterpreter.index_dictionary_file
+        .. :inheritdoc:: DataDictInterpreter.index_dictionary_file
 
 
 .. py:class:: CsvDataDictInterpreter(database_name: str = None, data_dict_file: str = None)
@@ -148,10 +150,10 @@ data_dict_interpreter
     :vartype beam_width: int
 
     .. py:method:: get_context_around_identifier(identifier: str, beam_width: int = None) -> list
-        :inheritdoc:: DataDictInterpreter.get_context_around_identifier
+        .. :inheritdoc:: DataDictInterpreter.get_context_around_identifier
 
     .. py:method:: index_dictionary_file(file_obj) -> defaultdict
-        :inheritdoc:: DataDictInterpreter.index_dictionary_file
+        .. :inheritdoc:: DataDictInterpreter.index_dictionary_file
 
 
 .. py:class:: JsonDataDictInterpreter(database_name: str = None, data_dict_file: str = None)
@@ -166,10 +168,10 @@ data_dict_interpreter
     :vartype beam_width: int
 
     .. py:method:: get_context_around_identifier(identifier: str, beam_width: int = None) -> list
-        :inheritdoc:: DataDictInterpreter.get_context_around_identifier
+        .. :inheritdoc:: DataDictInterpreter.get_context_around_identifier
 
     .. py:method:: index_dictionary_file(file_obj) -> defaultdict
-        :inheritdoc:: DataDictInterpreter.index_dictionary_file
+        .. :inheritdoc:: DataDictInterpreter.index_dictionary_file
 
 
 .. py:class:: DataDictInterpreterFactory(database_name: str)

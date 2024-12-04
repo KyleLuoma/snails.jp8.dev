@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>db_util_sqlite &#8212; SNAILS 2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=cb975c41"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="load_consolidated_results" href="load_consolidated_results.html" />
+    <link rel="prev" title="db_util" href="db_util.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="db-util-sqlite">
+<span id="id1"></span><h1>db_util_sqlite<a class="headerlink" href="#db-util-sqlite" title="Link to this heading">¶</a></h1>
+<dl class="py function" id="module-db_util_sqlite">
+<dt class="sig sig-object py" id="db_util_sqlite.do_query">
+<span class="sig-prename descclassname"><span class="pre">db_util_sqlite.</span></span><span class="sig-name descname"><span class="pre">do_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_list_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.local/spider_dbinfo.json'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#db_util_sqlite.do_query" title="Link to this definition">¶</a></dt>
+<dd><p>Executes a SQL query against a SQLite database and returns the result as a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The SQL query to execute.</p></li>
+<li><p><strong>database_name</strong> (<em>str</em>) – The name of the database to query.</p></li>
+<li><p><strong>db_list_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the JSON file containing database connection information. Defaults to “.local/spider_dbinfo.json”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The query result as a Pandas DataFrame, or an empty DataFrame if the query returns no results.  Returns None if a ValueError occurs during DataFrame creation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame or None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>FileNotFoundError</strong> – If the specified database is not found in the <cite>db_list_file</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_util_sqlite.connect_to_db">
+<span class="sig-prename descclassname"><span class="pre">db_util_sqlite.</span></span><span class="sig-name descname"><span class="pre">connect_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_list_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.local/spider_dbinfo.json'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sqlite3.Connection</span></span></span><a class="headerlink" href="#db_util_sqlite.connect_to_db" title="Link to this definition">¶</a></dt>
+<dd><p>Establishes a connection to a SQLite database based on information provided in a JSON file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database_name</strong> (<em>str</em>) – The name of the database to connect to.</p></li>
+<li><p><strong>db_list_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the JSON file containing database connection information. Defaults to “.local/spider_dbinfo.json”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A connection object to the SQLite database.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sqlite3.Connection</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>FileNotFoundError</strong> – If the specified database is not found in the <cite>db_list_file</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_util_sqlite.get_tables_and_columns_from_sqlite_db">
+<span class="sig-prename descclassname"><span class="pre">db_util_sqlite.</span></span><span class="sig-name descname"><span class="pre">get_tables_and_columns_from_sqlite_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append_col_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uppercase</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_list_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.local/spider_dbinfo.json'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db_util_sqlite.get_tables_and_columns_from_sqlite_db" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves table and column information from a SQLite database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_name</strong> (<em>str</em>) – The name of the database.</p></li>
+<li><p><strong>append_col_types</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to append column types to column names. Defaults to True.</p></li>
+<li><p><strong>table_list</strong> (<em>list</em><em>, </em><em>optional</em>) – Optional list of tables to retrieve information for. If None, retrieves information for all tables.</p></li>
+<li><p><strong>uppercase</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, converts table and column names to uppercase. Defaults to False.</p></li>
+<li><p><strong>schema</strong> (<em>str</em><em>, </em><em>optional</em>) – Optional schema name. Not used for SQLite. Defaults to “”.</p></li>
+<li><p><strong>db_list_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the JSON file containing database connection information. Defaults to “.local/spider_dbinfo.json”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary where keys are table names and values are lists of column names (optionally with types appended).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_util_sqlite.make_db_schema_prompt">
+<span class="sig-prename descclassname"><span class="pre">db_util_sqlite.</span></span><span class="sig-name descname"><span class="pre">make_db_schema_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sqlite'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'query'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier_tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_natural_schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db_util_sqlite.make_db_schema_prompt" title="Link to this definition">¶</a></dt>
+<dd><p>Constructs a database schema prompt for use with other tools.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_name</strong> – The name of the database.</p></li>
+<li><p><strong>db_type</strong> – The type of the database (‘sqlite’).</p></li>
+<li><p><strong>task</strong> – The task for which the prompt is being generated (‘query’ or ‘tables’).</p></li>
+<li><p><strong>table_list</strong> – A list of table names.</p></li>
+<li><p><strong>column_list</strong> – A list of column names.</p></li>
+<li><p><strong>identifier_tags</strong> – Whether to include identifier tags.</p></li>
+<li><p><strong>use_natural_schema</strong> – Whether to use a natural schema.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated database schema prompt.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_util_sqlite.get_tables_and_columns_df">
+<span class="sig-prename descclassname"><span class="pre">db_util_sqlite.</span></span><span class="sig-name descname"><span class="pre">get_tables_and_columns_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tables_and_col_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db_util_sqlite.get_tables_and_columns_df" title="Link to this definition">¶</a></dt>
+<dd><p>Converts a dictionary of table and column information into a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tables_and_col_dict</strong> – A dictionary where keys are table names and values are lists of column names.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Pandas DataFrame representing the table and column information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">SNAILS</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../usage/installation.html">Installing SNAILS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../artifacts/artifacts.html">SNAILS artifacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../natural_views/natural_views.html">Natural Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../src.html">src</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../end_to_end_data_prep_and_prediction.html">end_to_end_data_prep_and_prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../natural_view_builder.html">natural_view_builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nl_to_sql_inference_and_prompt_generation.html">nl_to_sql_inference_and_prompt_generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../query_manual_evaluation.html">query_manual_evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../query_profiler.html">query_profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../schema_graph.html">schema_graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../schema_linking_eval.html">schema_linking_eval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../schemarenamer.html">schemarenamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../semantic_compare.html">semantic_compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../word_list_matching.html">word_list_matching</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../src.html">src</a><ul>
+  <li><a href="util.html">util</a><ul>
+      <li>Previous: <a href="db_util.html" title="previous chapter">db_util</a></li>
+      <li>Next: <a href="load_consolidated_results.html" title="next chapter">load_consolidated_results</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Kyle Luoma.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/src/util/db_util_sqlite.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

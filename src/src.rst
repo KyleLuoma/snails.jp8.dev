@@ -1,6 +1,6 @@
 .. _src:
 
-Source Code Documentation
+src
 =========================
 
 
