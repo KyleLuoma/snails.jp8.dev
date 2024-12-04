@@ -14,7 +14,7 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="End to End Data Prep and Prediction" href="end_to_end_data_prep_and_prediction.html" />
+    <link rel="next" title="end_to_end_data_prep_and_prediction" href="end_to_end_data_prep_and_prediction.html" />
     <link rel="prev" title="SNAILS Reproducibility Notebooks" href="../reproducibility/notebooks.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -38,18 +38,65 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">End to End Data Prep and Prediction</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">end_to_end_data_prep_and_prediction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#mp_query_parse_function"><code class="docutils literal notranslate"><span class="pre">mp_query_parse_function()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#mp_schema_linking_eval"><code class="docutils literal notranslate"><span class="pre">mp_schema_linking_eval()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#nl_to_sql_generation"><code class="docutils literal notranslate"><span class="pre">nl_to_sql_generation()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="natural_view_builder.html">Natural View Builder</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="natural_view_builder.html">natural_view_builder</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.initialize_db_nl_schema"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.initialize_db_nl_schema()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.populate_db_nl_tables"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.populate_db_nl_tables()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.create_views_in_database"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.create_views_in_database()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.build_natural_view_queries"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.build_natural_view_queries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html">nl_to_sql_inference_and_prompt_generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#do_single_question"><code class="docutils literal notranslate"><span class="pre">do_single_question()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#naturalize_prompt"><code class="docutils literal notranslate"><span class="pre">naturalize_prompt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#denaturalize_query"><code class="docutils literal notranslate"><span class="pre">denaturalize_query()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#log_attempt"><code class="docutils literal notranslate"><span class="pre">log_attempt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#denaturalize_query_test"><code class="docutils literal notranslate"><span class="pre">denaturalize_query_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html#do_single_question_test"><code class="docutils literal notranslate"><span class="pre">do_single_question_test()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="query_manual_evaluation.html">query_manual_evaluation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="query_manual_evaluation.html#separate_by_line"><code class="docutils literal notranslate"><span class="pre">separate_by_line()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_manual_evaluation.html#clean"><code class="docutils literal notranslate"><span class="pre">clean()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_manual_evaluation.html#evaluate_queries_in_workbook"><code class="docutils literal notranslate"><span class="pre">evaluate_queries_in_workbook()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="query_profiler.html">query_profiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html#QueryProfiler"><code class="docutils literal notranslate"><span class="pre">QueryProfiler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html#tag_query_test"><code class="docutils literal notranslate"><span class="pre">tag_query_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html#profile_query_test"><code class="docutils literal notranslate"><span class="pre">profile_query_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html#print_tagged_query"><code class="docutils literal notranslate"><span class="pre">print_tagged_query()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html#all_tests"><code class="docutils literal notranslate"><span class="pre">all_tests()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="schema_graph.html">schema_graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema_graph.html#SchemaGraph"><code class="docutils literal notranslate"><span class="pre">SchemaGraph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="schema_linking_eval.html">schema_linking_eval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema_linking_eval.html#compare_query_schema_elements"><code class="docutils literal notranslate"><span class="pre">compare_query_schema_elements()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_linking_eval.html#mp_compare_query_schema_elements"><code class="docutils literal notranslate"><span class="pre">mp_compare_query_schema_elements()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_linking_eval.html#update_scores_in_existing_results"><code class="docutils literal notranslate"><span class="pre">update_scores_in_existing_results()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_linking_eval.html#compare_queries"><code class="docutils literal notranslate"><span class="pre">compare_queries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="schemarenamer.html">schemarenamer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schemarenamer.html#main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemarenamer.html#transform_score_df"><code class="docutils literal notranslate"><span class="pre">transform_score_df()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemarenamer.html#do_schema_renaming"><code class="docutils literal notranslate"><span class="pre">do_schema_renaming()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemarenamer.html#do_fewshot_identifier_transform"><code class="docutils literal notranslate"><span class="pre">do_fewshot_identifier_transform()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_compare.html">semantic_compare</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="semantic_compare.html#record_evaluation"><code class="docutils literal notranslate"><span class="pre">record_evaluation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="semantic_compare.html#compare_gold_to_generated"><code class="docutils literal notranslate"><span class="pre">compare_gold_to_generated()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="semantic_compare.html#do_batch_compare"><code class="docutils literal notranslate"><span class="pre">do_batch_compare()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="util/util.html">Utilities</a><ul class="simple">
@@ -92,8 +139,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../natural_views/natural_views.html">Natural Views</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Source Code Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">End to End Data Prep and Prediction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html">Natural View Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">end_to_end_data_prep_and_prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html">natural_view_builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html">nl_to_sql_inference_and_prompt_generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_manual_evaluation.html">query_manual_evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_profiler.html">query_profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_graph.html">schema_graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_linking_eval.html">schema_linking_eval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemarenamer.html">schemarenamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semantic_compare.html">semantic_compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="util/util.html">Utilities</a></li>
 </ul>
 </li>
@@ -104,7 +158,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../reproducibility/notebooks.html" title="previous chapter">SNAILS Reproducibility Notebooks</a></li>
-      <li>Next: <a href="end_to_end_data_prep_and_prediction.html" title="next chapter">End to End Data Prep and Prediction</a></li>
+      <li>Next: <a href="end_to_end_data_prep_and_prediction.html" title="next chapter">end_to_end_data_prep_and_prediction</a></li>
   </ul></li>
 </ul>
 </div>

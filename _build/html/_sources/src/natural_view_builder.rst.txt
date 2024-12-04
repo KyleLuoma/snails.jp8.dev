@@ -1,6 +1,6 @@
 .. _natural_view_builder:
 
-Natural View Builder
+natural_view_builder
 ====================
 
 
@@ -72,7 +72,7 @@ Natural View Builder
    :type xwalk_df: pandas.DataFrame, optional
    :return: A list of SQL view creation queries.
    :rtype: list
-   
+
 
 .. toctree::
     :maxdepth: 2

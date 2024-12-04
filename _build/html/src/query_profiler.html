@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>query_profiler &#8212; SNAILS 2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=cb975c41"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utilities" href="util/util.html" />
+    <link rel="prev" title="query_manual_evaluation" href="query_manual_evaluation.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="query-profiler">
+<span id="id1"></span><h1>query_profiler<a class="headerlink" href="#query-profiler" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="QueryProfiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QueryProfiler</span></span><a class="headerlink" href="#QueryProfiler" title="Link to this definition">¶</a></dt>
+<dd><p>A class to parse and profile queries using our java-based query parser analyzer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__jar_path</strong> (<em>str</em>) – The path to the jar file for the query parser analyzer.</p></li>
+<li><p><strong>query</strong> (<em>str</em>) – The query to be parsed and profiled.</p></li>
+<li><p><strong>tree</strong> (<em>dict</em>) – The tree representation of the query.</p></li>
+<li><p><strong>stats</strong> (<em>dict</em>) – The statistics of the query.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.profile_query">
+<span class="sig-name descname"><span class="pre">profile_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#QueryProfiler.profile_query" title="Link to this definition">¶</a></dt>
+<dd><p>Parses and profiles the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – The query to be parsed and profiled.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the parse tree and statistics of the query.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.get_identifiers_and_labels">
+<span class="sig-name descname"><span class="pre">get_identifiers_and_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distinct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#QueryProfiler.get_identifiers_and_labels" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of the identifiers and labels in the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em><em> or </em><em>None</em>) – The query to be parsed (optional, defaults to self.query).</p></li>
+<li><p><strong>distinct</strong> (<em>bool</em>) – Whether to return distinct identifiers (default is True).</p></li>
+<li><p><strong>include_brackets</strong> (<em>bool</em>) – Whether to include brackets in identifiers (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing lists of tables, columns, logical operators, functions, and a dictionary of clauses.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.get_identifiers_and_labels_df">
+<span class="sig-name descname"><span class="pre">get_identifiers_and_labels_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#QueryProfiler.get_identifiers_and_labels_df" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a dataframe of the identifiers and labels in the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em><em> or </em><em>None</em>) – The query to be parsed (optional, defaults to self.query).</p></li>
+<li><p><strong>query_num</strong> (<em>int</em>) – The query number (default is -1).</p></li>
+<li><p><strong>include_brackets</strong> (<em>bool</em>) – Whether to include brackets in identifiers (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Pandas DataFrame containing the query number, identifier type, and identifier value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.tag_query">
+<span class="sig-name descname"><span class="pre">tag_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syntax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'tsql'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#QueryProfiler.tag_query" title="Link to this definition">¶</a></dt>
+<dd><p>Tags a query’s table and column names using the java-based query parser analyzer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The query to be tagged.</p></li>
+<li><p><strong>syntax</strong> (<em>str</em>) – The syntax of the query (default is “tsql”). Available options: “tsql”, “sqlite”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the tagged query, table aliases, and column aliases.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.__parse_query">
+<span class="sig-name descname"><span class="pre">__parse_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syntax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'mssql'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#QueryProfiler.__parse_query" title="Link to this definition">¶</a></dt>
+<dd><p>Parses a query using the java-based query parser analyzer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The query to be parsed.</p></li>
+<li><p><strong>syntax</strong> (<em>str</em>) – The syntax of the query (default is “mssql”). Currently only “mssql” is supported.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the parse tree and statistics of the query.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.parse_tree_pretty_print">
+<span class="sig-name descname"><span class="pre">parse_tree_pretty_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#QueryProfiler.parse_tree_pretty_print" title="Link to this definition">¶</a></dt>
+<dd><p>Prints a formatted representation of the parse tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tree</strong> (<em>dict</em><em> or </em><em>None</em>) – The parse tree to print (optional, defaults to self.tree).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QueryProfiler.__single_obj_dict_to_tuple">
+<span class="sig-name descname"><span class="pre">__single_obj_dict_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_in</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#QueryProfiler.__single_obj_dict_to_tuple" title="Link to this definition">¶</a></dt>
+<dd><p>Converts a single-key dictionary to a tuple.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict_in</strong> (<em>dict</em>) – The dictionary to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the key and value of the input dictionary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tag_query_test">
+<span class="sig-name descname"><span class="pre">tag_query_test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tag_query_test" title="Link to this definition">¶</a></dt>
+<dd><p>Tests the <code class="docutils literal notranslate"><span class="pre">tag_query</span></code> method.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profile_query_test">
+<span class="sig-name descname"><span class="pre">profile_query_test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#profile_query_test" title="Link to this definition">¶</a></dt>
+<dd><p>Tests the <code class="docutils literal notranslate"><span class="pre">profile_query</span></code> method.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="print_tagged_query">
+<span class="sig-name descname"><span class="pre">print_tagged_query</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#print_tagged_query" title="Link to this definition">¶</a></dt>
+<dd><p>Prints a tagged query and its statistics.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_tests">
+<span class="sig-name descname"><span class="pre">all_tests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#all_tests" title="Link to this definition">¶</a></dt>
+<dd><p>Runs all test functions.</p>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">SNAILS</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installing SNAILS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../artifacts/artifacts.html">SNAILS artifacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../natural_views/natural_views.html">Natural Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">Source Code Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">end_to_end_data_prep_and_prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html">natural_view_builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nl_to_sql_inference_and_prompt_generation.html">nl_to_sql_inference_and_prompt_generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_manual_evaluation.html">query_manual_evaluation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">query_profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util/util.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="src.html">Source Code Documentation</a><ul>
+      <li>Previous: <a href="query_manual_evaluation.html" title="previous chapter">query_manual_evaluation</a></li>
+      <li>Next: <a href="util/util.html" title="next chapter">Utilities</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Kyle Luoma.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/src/query_profiler.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

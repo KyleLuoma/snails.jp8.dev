@@ -1,5 +1,7 @@
-Canine-Based Naturalness Classifier
-===================================
+.. _snails_naturalness_classifier:
+
+snails_naturalness_classifier
+=============================
 
 .. py:class:: CanineIdentifierClassifier(identifiers=pd.DataFrame())
 

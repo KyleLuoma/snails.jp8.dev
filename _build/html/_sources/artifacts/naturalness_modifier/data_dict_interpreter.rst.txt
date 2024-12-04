@@ -1,7 +1,8 @@
 .. _data_dict_interpreter:
 
-Data Dictionary Interpreter - Identifier Expander
-=================================================
+data_dict_interpreter
+=====================
+
 
 .. py:class:: DataDictInterpreter(database_name: str = None, data_dict_file: str = None)
 

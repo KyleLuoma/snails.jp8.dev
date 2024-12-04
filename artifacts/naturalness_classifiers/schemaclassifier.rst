@@ -1,7 +1,7 @@
 .. _db_schema_classifier:
 
-Database Schema Classifier
-==========================
+db_schema_classifier
+====================
 
 .. py:function:: classify_db_schema(db_name, tagged=True, db_type="ms sql")
 

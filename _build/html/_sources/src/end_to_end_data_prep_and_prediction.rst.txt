@@ -1,6 +1,6 @@
 .. _end_to_end_data_prep_and_prediction:
 
-End to End Data Prep and Prediction
+end_to_end_data_prep_and_prediction
 ===================================
 
 .. py:function:: main(model: str, service: str, naturalness: str, database: str, bypass_nl_sql_inference: bool = True, db_list_file: str = ".local/dbinfo.json")
