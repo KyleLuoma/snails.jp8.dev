@@ -1,4 +1,4 @@
-:: _naturalness_classifiers:
+.. _naturalness_classifiers:
 
 Naturalness Classifiers
 =======================
@@ -6,3 +6,6 @@ Naturalness Classifiers
 .. toctree::
     :maxdepth: 2
     :caption: Contents:
+    :glob:
+
+    naturalness_classifiers/*

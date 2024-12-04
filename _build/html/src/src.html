@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Source Code Documentation &#8212; SNAILS 2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=cb975c41"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="End to End Data Prep and Prediction" href="end_to_end_data_prep_and_prediction.html" />
+    <link rel="prev" title="SNAILS Reproducibility Notebooks" href="../reproducibility/notebooks.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="source-code-documentation">
+<span id="src"></span><h1>Source Code Documentation<a class="headerlink" href="#source-code-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">End to End Data Prep and Prediction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#mp_query_parse_function"><code class="docutils literal notranslate"><span class="pre">mp_query_parse_function()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#mp_schema_linking_eval"><code class="docutils literal notranslate"><span class="pre">mp_schema_linking_eval()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html#nl_to_sql_generation"><code class="docutils literal notranslate"><span class="pre">nl_to_sql_generation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="natural_view_builder.html">Natural View Builder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.initialize_db_nl_schema"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.initialize_db_nl_schema()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.populate_db_nl_tables"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.populate_db_nl_tables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.create_views_in_database"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.create_views_in_database()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html#NaturalViewBuilder.build_natural_view_queries"><code class="docutils literal notranslate"><span class="pre">NaturalViewBuilder.build_natural_view_queries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="util/util.html">Utilities</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">SNAILS</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installing SNAILS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../artifacts/artifacts.html">SNAILS artifacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../natural_views/natural_views.html">Natural Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reproducibility/reproducibility.html">Reproducing SNAILS Experiments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Source Code Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="end_to_end_data_prep_and_prediction.html">End to End Data Prep and Prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_view_builder.html">Natural View Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util/util.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../reproducibility/notebooks.html" title="previous chapter">SNAILS Reproducibility Notebooks</a></li>
+      <li>Next: <a href="end_to_end_data_prep_and_prediction.html" title="next chapter">End to End Data Prep and Prediction</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Kyle Luoma.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/src/src.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
