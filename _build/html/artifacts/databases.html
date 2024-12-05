@@ -36,6 +36,22 @@
   <section id="snails-databases">
 <span id="databases"></span><h1>SNAILS databases<a class="headerlink" href="#snails-databases" title="Link to this heading">¶</a></h1>
 <p>We offer the SNAILS database collection in both MS SQL and Sqlite formats.</p>
+<p>To run any SNAILS reproducibility scripts, you must first download the MS SQL backup files here:</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/1EMQmdNx-a20TfZSDdNkFPLmXVS48IB2b/view?usp=drive_link">https://drive.google.com/file/d/1EMQmdNx-a20TfZSDdNkFPLmXVS48IB2b/view?usp=drive_link</a></p>
+<p>If you’re running <strong>Windows</strong>, you can either use Docker or import the provided .bak files into a MS SQL server database
+<a class="reference external" href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/quickstart-backup-restore-database?view=sql-server-ver16&amp;tabs=ssms">following the steps here</a>.</p>
+<p>Once you’ve imported the .bak files into an MS SQL database, you’ll need to configure the <code class="docutils literal notranslate"><span class="pre">.local/dbinfo.json</span></code> file for your system’s login credentials. If this is too complicated, then consider using the Docker-based approach below.</p>
+<p>For <strong>Linux</strong>, <strong>WSL</strong>, or <strong>Apple</strong> users, we recommend the Docker-based approach.</p>
+<ol class="arabic">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">SNAILS_database_collection.tar.gz</span></code> from the link above into <code class="docutils literal notranslate"><span class="pre">./SNAILS_Artifacts/databases/</span></code></p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">./SNAILS_Artifacts/databases/</span></code> directory, Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">install_snails_db</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">bash</span> <span class="n">run_docker_snails_db</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This will build a MS SQL docker image, copy the .bak files into the container, and unzip and import the .bak files into the database. It will also copy the required <code class="docutils literal notranslate"><span class="pre">dbinfo.json</span></code> file into the <code class="docutils literal notranslate"><span class="pre">./.local/</span></code> directory.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
