@@ -35,6 +35,18 @@
             
   <section id="snails-nl-question-gold-sql-query-dataset">
 <span id="question-query-pairs"></span><h1>SNAILS NL Question - Gold SQL Query dataset<a class="headerlink" href="#snails-nl-question-gold-sql-query-dataset" title="Link to this heading">¶</a></h1>
+<p>Question - query pairs are stored as executable .sql files with questions entered as SQL comments.
+Each question is delinated by a ‘;’ expression terminator.
+In this repository, we store them in a .zip file <code class="docutils literal notranslate"><span class="pre">./queries/NL-Questions-and-Gold-Queries.zip</span></code> to avoid inadvertent inclusion in future LLM training data sets.</p>
+<p>If you opt to use these in your own projects, please avoid publishing them where they can be scraped.</p>
+<p>Example pair:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-- 5: How many events observed at least some stage of decay?
+select count(distinct Event_ID)
+from tbl_Deadwood
+;
+</pre></div>
+</div>
+<p>To run SNAILS reproducibility scripts, you don’t need to interact with or manipulate the gold query file. <a class="reference internal" href="../src/util/load_nl_questions.html#load-nl-questions"><span class="std std-ref">load_nl_questions</span></a> handles this for you.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
