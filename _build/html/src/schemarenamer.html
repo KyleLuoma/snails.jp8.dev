@@ -89,32 +89,57 @@
 </dl>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="schemarenamer.do_fewshot_identifier_transform">
-<span class="sig-prename descclassname"><span class="pre">schemarenamer.</span></span><span class="sig-name descname"><span class="pre">do_fewshot_identifier_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">naturalness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict_interpreter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_most_natural</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpt_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gpt-4o'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#schemarenamer.do_fewshot_identifier_transform" title="Link to this definition">¶</a></dt>
-<dd><p>Transforms a given identifier to different naturalness levels using few-shot prompting and a data dictionary interpreter.</p>
+<p>:
+.. py:function:: do_fewshot_identifier_transform(identifier, naturalness, data_dict_interpreter=None, only_most_natural=False, verbose=True, gpt_model=”gpt-4o”) -&gt; dict</p>
+<blockquote>
+<div><p>Transforms a given identifier to different naturalness levels using few-shot prompting and a data dictionary interpreter.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>identifier</strong> (<em>str</em>) – The identifier to transform.</p></li>
-<li><p><strong>naturalness</strong> (<em>str</em>) – The original naturalness level of the identifier (e.g., “N1”, “N2”, “N3”).</p></li>
-<li><p><strong>data_dict_interpreter</strong> (<em>SNAILS_Artifacts.naturalness_modifier .data_dict_reader.DataDictInterpreter</em><em> or </em><em>None</em>) – An instance of DataDictInterpreter for retrieving natural identifiers. Defaults to None.</p></li>
-<li><p><strong>only_most_natural</strong> (<em>bool</em>) – If True, only generates the most natural identifier. Defaults to False.</p></li>
-<li><p><strong>verbose</strong> (<em>bool</em>) – If True, prints progress information. Defaults to True.</p></li>
-<li><p><strong>gpt_model</strong> (<em>str</em>) – The GPT model to use. Defaults to “gpt-4o”.</p></li>
-</ul>
+<dt class="field-odd">param identifier<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The identifier to transform.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A dictionary containing the transformed identifiers for different naturalness levels.</p>
+<dt class="field-even">type identifier<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>dict</p>
+<dt class="field-odd">param naturalness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The original naturalness level of the identifier (e.g., “N1”, “N2”, “N3”).</p>
+</dd>
+<dt class="field-even">type naturalness<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param data_dict_interpreter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An instance of DataDictInterpreter for retrieving natural identifiers. Defaults to None.</p>
+</dd>
+<dt class="field-even">type data_dict_interpreter<span class="colon">:</span></dt>
+<dd class="field-even"><p>SNAILS_Artifacts.naturalness_modifier .data_dict_reader.DataDictInterpreter or None</p>
+</dd>
+<dt class="field-odd">param only_most_natural<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If True, only generates the most natural identifier. Defaults to False.</p>
+</dd>
+<dt class="field-even">type only_most_natural<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">param verbose<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If True, prints progress information. Defaults to True.</p>
+</dd>
+<dt class="field-even">type verbose<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">param gpt_model<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The GPT model to use. Defaults to “gpt-4o”.</p>
+</dd>
+<dt class="field-even">type gpt_model<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing the transformed identifiers for different naturalness levels.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 <div class="toctree-wrapper compound">
 </div>
-</dd></dl>
-
+</div></blockquote>
 </section>
 
 

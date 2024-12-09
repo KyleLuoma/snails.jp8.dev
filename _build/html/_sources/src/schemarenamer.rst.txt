@@ -41,6 +41,7 @@ schemarenamer
    :return: DataFrame containing original and generated identifiers with scores and errors.
    :rtype: pandas.DataFrame
 
+:
 .. py:function:: do_fewshot_identifier_transform(identifier, naturalness, data_dict_interpreter=None, only_most_natural=False, verbose=True, gpt_model="gpt-4o") -> dict
 
    Transforms a given identifier to different naturalness levels using few-shot prompting and a data dictionary interpreter.

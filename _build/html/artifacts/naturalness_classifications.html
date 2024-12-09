@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Naturalness Classifiers" href="naturalness_classifiers.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="databases/installing_databases.html" />
+    <link rel="prev" title="Database Installation" href="databases/installing_databases.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -35,8 +35,19 @@
             
   <section id="snails-identifier-naturalness-data">
 <h1>SNAILS Identifier Naturalness data<a class="headerlink" href="#snails-identifier-naturalness-data" title="Link to this heading">¶</a></h1>
+<section id="dataset-generation">
+<h2>Dataset Generation<a class="headerlink" href="#dataset-generation" title="Link to this heading">¶</a></h2>
+<p>We made several different attempts at schema identifier naturalness classification including human scoring, heuristics-based, and machine learning.
+Ultimately, we generated a ground truth dataset by validating and, where needed, modifying labels classified by a finetuned GPT davinci classification model.
+Using this dataset, we then trained a local model based on Canine that outperforms the GPT-based model.</p>
+</section>
+<section id="dataset-download">
+<h2>Dataset Download<a class="headerlink" href="#dataset-download" title="Link to this heading">¶</a></h2>
+<p>The dataset can be accessed on our
+<a class="reference external" href="https://github.com/KyleLuoma/SNAILS/tree/main/SNAILS_Artifacts/naturalness_classifications">GitHub repository</a>.</p>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -87,7 +98,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="artifacts.html">SNAILS artifacts</a><ul>
-      <li>Previous: <a href="databases/installing_databases.html" title="previous chapter">&lt;no title&gt;</a></li>
+      <li>Previous: <a href="databases/installing_databases.html" title="previous chapter">Database Installation</a></li>
       <li>Next: <a href="naturalness_classifiers.html" title="next chapter">Naturalness Classifiers</a></li>
   </ul></li>
   </ul></li>

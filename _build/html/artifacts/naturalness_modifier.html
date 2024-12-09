@@ -35,6 +35,17 @@
             
   <section id="naturalness-modifier">
 <span id="id1"></span><h1>Naturalness Modifier<a class="headerlink" href="#naturalness-modifier" title="Link to this heading">¶</a></h1>
+<p>Schema Identifier Transformation and Naturalness-Modified Identifier Generation</p>
+<p>To better observe the effect of naturalness levels on linking performance, we create alternate versions of all identifiers in the benchmark datasets.</p>
+<p>Naturalness modification is performed the using <a class="reference internal" href="../src/schemarenamer.html#schemarenamer"><span class="std std-ref">schemarenamer</span></a> <code class="docutils literal notranslate"><span class="pre">do_fewshot_identifier_transform</span></code> function.</p>
+<section id="more-natural-to-less-natural">
+<h2>More natural to less natural<a class="headerlink" href="#more-natural-to-less-natural" title="Link to this heading">¶</a></h2>
+<p>Creating a less natural version of a natural identifier is a task of abbreviation. Less natural identifiers should contain elements of the full words that they represent.</p>
+<p>in cases of transformation from higher to lower naturalness levels, do_fewshot_identifier_transform passes the fewshot prompts in the <code class="docutils literal notranslate"><span class="pre">./prompts/</span></code> directory to our callgpt.call_gpt function:</p>
+</section>
+<section id="less-natural-to-more-natural">
+<h2>Less natural to more natural<a class="headerlink" href="#less-natural-to-more-natural" title="Link to this heading">¶</a></h2>
+<p>Less natural to more natural transformation makes use of the <a class="reference internal" href="naturalness_modifier/data_dict_interpreter.html#data-dict-interpreter"><span class="std std-ref">data_dict_interpreter</span></a>. This program uses database metadata (xml, pdf, or csv format) and GPT fewshot prompting to expand abbreviated identifiers.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -49,6 +60,7 @@
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 
