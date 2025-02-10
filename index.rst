@@ -30,6 +30,10 @@ What SNAILS Isn't:
 
 SNAILS is not a fully-featured benchmark similar to Spider or BIRD that maintains a leaderboard, and provides a training, and dev dataset while also retaining a hidden test set. Instead SNAILS artifacts are a starting point for further research into schema-specific effects on NL-to-SQL. It can also be used to support the development of new NL-to-SQL methods. We encourage other researchers and developers to use our artifacts for their research objectives, and invite collaboration and feedback from the community.
 
+Contact First Author 
+--------------------
+Email: `kluoma@ucsd.edu <mailto:kluoma@ucsd.edu>`_
+
 
 .. toctree::
    :maxdepth: 2
