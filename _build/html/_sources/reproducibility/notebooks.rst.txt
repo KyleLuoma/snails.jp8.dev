@@ -6,6 +6,8 @@ SNAILS Reproducibility Notebooks
 The SNAILS repository contains 10 numbered Jupyter notebooks in the root of the project.
 Notebooks 1 - 3 must be run in-sequence. Notebooks 4 - 10 may be run in any order.
 
+NOTE on database hosting: Reproduction requires an MS SQL database. This can either be hosted natively on a Windows OS, or via Docker (requires Docker installation) and the installation scripts provided in the archive.
+
 Before running any notebooks, you must install dependences (:ref:`installing`) and instantiate the SNAILS databases (:ref:`databases`).
 
 1. `Run NL-to-SQL Inference and Auto Scoring <https://github.com/KyleLuoma/SNAILS/blob/main/01-SNAILS-NL-to-SQL-Inference-and-Scoring.ipynb>`_: Generates and evaluates SQL queries for both execution accuracy and schema linking performance. Outputs to ``./data/nl-to-sql-performance_annotations/pending_evaluation/``.

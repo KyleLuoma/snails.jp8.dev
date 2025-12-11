@@ -14,11 +14,14 @@ Start by **cloning the repository** and installing dependencies::
     venv/scripts/activate <or> source venv/bin/activate
     pip install -r requirements.txt
 
+
 **PyTorch is required**
 but we don't include it in requirements.txt. This is so that 
 you can `acquire the appropriate configuration <https://pytorch.org/get-started/locally/>`_ for your own environment.
 
 **Install the SNAILS database instances** by following the steps in :ref:`databases`
+
+**Either MS SQL Server on Windows or hosted via Docker is required for database installation!**
 
 **Add your own API keys** to the following files in .local_example and move to the .local folder:
 
